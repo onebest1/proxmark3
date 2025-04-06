@@ -51,8 +51,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: proxmark3-make-binaries
-          path: |
-            work/
+          path: ./
           if-no-files-found: error
 
   ubuntu-make-btaddon:
@@ -90,8 +89,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: proxmark3-btaddon-binaries
-          path: |
-            work/
+          path: ./
           if-no-files-found: error
 
   ubuntu-cmake:
@@ -140,6 +138,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: proxmark3-cmake-binaries
-          path: |
-            work/
+          path: ./
           if-no-files-found: error
