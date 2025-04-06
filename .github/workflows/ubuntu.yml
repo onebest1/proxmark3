@@ -52,8 +52,7 @@ jobs:
         with:
           name: proxmark3-make-binaries
           path: |
-            proxmark3
-            bootrom.elf
+            client/
           if-no-files-found: error
 
   ubuntu-make-btaddon:
@@ -92,8 +91,7 @@ jobs:
         with:
           name: proxmark3-btaddon-binaries
           path: |
-            proxmark3
-            bootrom.elf
+            client/
           if-no-files-found: error
 
   ubuntu-cmake:
