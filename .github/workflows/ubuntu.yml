@@ -46,6 +46,15 @@ jobs:
       - name: Test
         run: make check
 
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: proxmark3-make-binaries
+          path: |
+            proxmark3
+            bootrom.elf
+          if-no-files-found: error
+
   ubuntu-make-btaddon:
     runs-on: ubuntu-latest
 
@@ -76,6 +85,15 @@ jobs:
 
       - name: Test
         run: make check
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: proxmark3-btaddon-binaries
+          path: |
+            proxmark3
+            bootrom.elf
+          if-no-files-found: error
 
   ubuntu-cmake:
     runs-on: ubuntu-latest
@@ -118,3 +136,11 @@ jobs:
         env:
           CHECKARGS: "--clientbin ./client/build/proxmark3"
         run: make client/check
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: proxmark3-cmake-binaries
+          path: |
+            client/
+          if-no-files-found: error
