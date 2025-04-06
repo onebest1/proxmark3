@@ -3,11 +3,11 @@
 
 # By default PM3 RDV4 image is generated.
 # Comment the line below and uncomment further down according to which device you have
-PLATFORM=PM3RDV4
+#PLATFORM=PM3RDV4
 
 # For PM3 Easy:
 # uncomment the line below
-#PLATFORM=PM3GENERIC
+PLATFORM=PM3GENERIC
 
 # For ICOPY-X and PM3 Max:
 # uncomment the two lines below
